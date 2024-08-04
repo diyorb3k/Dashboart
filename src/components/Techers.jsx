@@ -5,7 +5,7 @@ import { Table, Button, Spin, Alert } from 'antd';
 import AddTodo from "./AddTodo";
 import EditTodo from "./EditTodo";
 
-const Student = () => {
+const Teachers = () => {
   const { loading, todos, error } = useSelector((state) => state.todo);
   const dispatch = useDispatch();
   const [isEditing, setIsEditing] = useState(false);
@@ -87,4 +87,4 @@ const Student = () => {
   );
 };
 
-export default Student;
+export default Teachers;
