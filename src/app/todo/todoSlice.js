@@ -4,8 +4,7 @@ import axios from "axios";
 export const fetchTodos = createAsyncThunk("todos/fetchTodos", async () => {
   try {
     const res = await axios.get("http://localhost:3000/users");
-    const data = await res.data;
-    return data;
+    return res.data;
   } catch (err) {
     return err.message;
   }
@@ -14,8 +13,7 @@ export const fetchTodos = createAsyncThunk("todos/fetchTodos", async () => {
 export const addTodo = createAsyncThunk("todos/addTodo", async (todo) => {
   try {
     const res = await axios.post("http://localhost:3000/users", todo);
-    const data = await res.data;
-    return data;
+    return res.data;
   } catch (err) {
     return err.message;
   }
@@ -24,8 +22,7 @@ export const addTodo = createAsyncThunk("todos/addTodo", async (todo) => {
 export const deleteTodo = createAsyncThunk("todos/deleteTodo", async (id) => {
   try {
     const res = await axios.delete(`http://localhost:3000/users/${id}`);
-    const data = await res.data;
-    return data;
+    return res.data;
   } catch (err) {
     return err.message;
   }
@@ -34,8 +31,7 @@ export const deleteTodo = createAsyncThunk("todos/deleteTodo", async (id) => {
 export const updateTodo = createAsyncThunk("todos/updateTodo", async (todo) => {
   try {
     const res = await axios.put(`http://localhost:3000/users/${todo.id}`, todo);
-    const data = await res.data;
-    return data;
+    return res.data;
   } catch (err) {
     return err.message;
   }
@@ -66,9 +62,9 @@ const todoSlice = createSlice({
     builder.addCase(fetchTodos.rejected, (state, action) => {
       state.loading = false;
       state.todos = [];
-      state.error = action.payload;
+      state.error = action.error.message;
     });
-    //    addTodo
+    // addTodo
     builder.addCase(addTodo.pending, (state) => {
       state.loading = true;
     });
@@ -79,22 +75,22 @@ const todoSlice = createSlice({
     });
     builder.addCase(addTodo.rejected, (state, action) => {
       state.loading = false;
-      state.error = action.payload;
+      state.error = action.error.message;
     });
-    //    deleteTodo
+    // deleteTodo
     builder.addCase(deleteTodo.pending, (state) => {
       state.loading = true;
     });
     builder.addCase(deleteTodo.fulfilled, (state, action) => {
       state.loading = false;
-      state.todos = state.todos.filter((todo) => todo.id !== action.payload.id);
+      state.todos = state.todos.filter((todo) => todo.id !== action.meta.arg);
       state.error = "";
     });
     builder.addCase(deleteTodo.rejected, (state, action) => {
       state.loading = false;
-      state.error = action.payload;
+      state.error = action.error.message;
     });
-    //    updateTodo
+    // updateTodo
     builder.addCase(updateTodo.pending, (state) => {
       state.loading = true;
     });
@@ -107,7 +103,7 @@ const todoSlice = createSlice({
     });
     builder.addCase(updateTodo.rejected, (state, action) => {
       state.loading = false;
-      state.error = action.payload;
+      state.error = action.error.message;
     });
   },
 });
