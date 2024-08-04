@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../app/todo/todoSlice";
+import './Student.css'
 
 const AddTodo = () => {
   const dispatch = useDispatch();
@@ -24,27 +25,30 @@ const AddTodo = () => {
   };
 
   return (
-    <div>
+    <div className="forminput" >
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="First Name"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
+          required
         />
         <input
           type="text"
           placeholder="Last Name"
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
+          required
         />
         <input
           type="text"
           placeholder="Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          required
         />
-        <button type="submit">Add</button>
+        <button className="custom-stylish-button " type="submit"  onClick={{handleSubmit}}>Add</button>
       </form>
     </div>
   );

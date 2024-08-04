@@ -8,6 +8,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PeopleIcon from "@mui/icons-material/People";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import LayersIcon from "@mui/icons-material/Layers";
+import { GiTeacher } from "react-icons/gi";
 
 export const mainListItems = (
   <>
@@ -19,19 +20,19 @@ export const mainListItems = (
     </ListItemButton>
     <ListItemButton component={Link} to="/student">
       <ListItemIcon>
-        <ShoppingCartIcon />
+      <PeopleIcon/>
       </ListItemIcon>
       <ListItemText primary="Students" />
     </ListItemButton>
     <ListItemButton component={Link} to="/teachers">
       <ListItemIcon>
-        <PeopleIcon />
+      <GiTeacher />
       </ListItemIcon>
       <ListItemText primary="Teachers" />
     </ListItemButton>
     <ListItemButton component={Link} to="/teachers">
       <ListItemIcon>
-        <PeopleIcon />
+        <PeopleIcon/>
       </ListItemIcon>
       <ListItemText primary="Profiles" />
     </ListItemButton>
