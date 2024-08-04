@@ -1,225 +1,38 @@
 {
   "users": [
     {
-      "id": "b509",
-      "firstName": "Jane",
-      "lastName": "Smith",
-      "title": "zcxvs",
+      "id": "4fbb",
+      "title": "sdcs",
+      "firstName": "acsdcc",
+      "lastName": "adcdsc",
       "completed": false
     },
     {
-      "id": "0239",
-      "firstName": "Ali",
-      "lastName": "Valiyev",
-      "title": "Salom",
+      "id": "0fbf",
+      "title": "sfdffdsgs",
+      "firstName": "qasddsf",
+      "lastName": "fsdfsd",
       "completed": false
     },
     {
-      "id": "b151",
-      "firstName": "Sara",
-      "lastName": "Omonova",
-      "title": "Salom",
+      "id": "9fbd",
+      "title": "sgsgfdsr",
+      "firstName": "sdfsd",
+      "lastName": "sdfsgsf",
       "completed": false
     },
     {
-      "id": "64e9",
-      "firstName": "Aziz",
-      "lastName": "Bekov",
-      "title": "Salom",
+      "id": "dce5",
+      "title": "sggrwew",
+      "firstName": "fdsfgsdd",
+      "lastName": "sdgdss",
       "completed": false
     },
     {
-      "id": "2dc5",
-      "firstName": "Nodira",
-      "lastName": "Rashidova",
-      "title": "Salom",
-      "completed": false
-    },
-    {
-      "id": "dc7f",
-      "firstName": "Timur",
-      "lastName": "Saidov",
-      "title": "Salom",
-      "completed": false
-    },
-    {
-      "id": "e407",
-      "firstName": "Laylo",
-      "lastName": "Mirzayeva",
-      "title": "Salom",
-      "completed": false
-    },
-    {
-      "id": "8e35",
-      "firstName": "Javlon",
-      "lastName": "Qodirov",
-      "title": "Salom",
-      "completed": false
-    },
-    {
-      "id": "2337",
-      "title": "salom",
-      "firstName": "Diyorbek",
-      "lastName": "Bekmurodov",
-      "completed": false
-    },
-    {
-      "id": "ca00",
-      "title": "csadcs",
-      "firstName": "axcsdc",
-      "lastName": "acsdc",
-      "completed": false
-    },
-    {
-      "id": "9d08",
-      "title": "zxcasdc",
-      "firstName": "Cscs",
-      "lastName": "adscasx",
-      "completed": false
-    },
-    {
-      "id": "f1fd",
-      "title": "jasdfsfwd",
-      "firstName": "Bekmurodov",
-      "lastName": "Diyorbek",
-      "completed": false
-    },
-    {
-      "id": "f495",
-      "title": "sdgsgdsd",
-      "firstName": "asdafwfsa",
-      "lastName": "afasdfsdf",
-      "completed": false
-    },
-    {
-      "id": "498f",
-      "title": "jecge4tkhvtr",
-      "firstName": "dqpdkwfwe",
-      "lastName": "dfverfbjf",
-      "completed": false
-    },
-    {
-      "id": "061e",
-      "title": "fsdgdf",
-      "firstName": "csdfsd",
-      "lastName": "qsfwdf",
-      "completed": false
-    },
-    {
-      "id": "7106",
-      "title": "{handleSubmit}",
-      "firstName": "{handleSubmit}",
-      "lastName": "{handleSubmit}",
-      "completed": false
-    },
-    {
-      "id": "1322",
-      "title": "икдвптвик",
-      "firstName": "уацвмуа",
-      "lastName": "мчисиваип",
-      "completed": false
-    },
-    {
-      "id": "fd2a",
-      "title": "чсмлттваик",
-      "firstName": "чсмбвьтиа",
-      "lastName": "мьстваипл",
-      "completed": false
-    },
-    {
-      "id": "526e",
-      "title": "svbewfgvbwer",
-      "firstName": "qsdwfwdc",
-      "lastName": ",mfnwadf",
-      "completed": false
-    },
-    {
-      "id": "9bc7",
-      "title": "qsbef",
-      "firstName": "Nurjahon",
-      "lastName": "Turayev",
-      "completed": false
-    },
-    {
-      "id": "0d24",
-      "title": "sdvsadvds",
-      "firstName": "asdaefw",
-      "lastName": "sdvdsvds",
-      "completed": false
-    },
-    {
-      "id": "17cf",
-      "title": "dsvdsavdsav",
-      "firstName": "acsdvdasv",
-      "lastName": "zcsadvasdv",
-      "completed": false
-    },
-    {
-      "id": "59c2",
-      "title": " xcvdzvszca",
-      "firstName": "sdvsdvcszx",
-      "lastName": "zx zxv dxc ",
-      "completed": false
-    },
-    {
-      "id": "9589",
-      "title": "xcvxzcvx",
-      "firstName": "cx zxvsdvesf",
-      "lastName": "zxcvzsvcx",
-      "completed": false
-    },
-    {
-      "id": "8814",
-      "title": "xcxcv",
-      "firstName": "cxzcsdcx",
-      "lastName": "xzcvxcxc",
-      "completed": false
-    },
-    {
-      "id": "0e22",
-      "title": "ямывмым",
-      "firstName": "вафываф",
-      "lastName": "фавваыав",
-      "completed": false
-    },
-    {
-      "id": "3c0f",
-      "title": "sdfdsczc",
-      "firstName": "fdfsdsfs",
-      "lastName": "sfsvzx",
-      "completed": false
-    },
-    {
-      "id": "592b",
-      "title": "xbcxvbcxv",
-      "firstName": "zsdvs",
-      "lastName": "xcvzxcvxc",
-      "completed": false
-    },
-    {
-      "id": "4225",
-      "title": "sdfsdgfsfd",
-      "firstName": "vcxbxc bcx",
-      "lastName": " cdzfgsfg",
-      "completed": false
-    },
-    {
-      "id": "e074",
-      "title": "fsdfdssfsdd",
-      "firstName": "dqsfdafadsfa",
-      "lastName": "dfdsgvdfscvx",
-      "completed": false
-    },
-    {
-      "id": "1438",
-      "title": "diyorbek",
-      "firstName": "sdghdfkbhdk",
-      "lastName": "bekmurdov",
-      "completed": false
-    },
-    {
-      "id": "9abc",
-      "title": "vbcv",
+      "id": "093f",
+      "title": "trertedf",
+      "firstName": "wewrtrw",
+      "lastName": "erertwer43",
       "completed": false
     }
   ],
@@ -231,91 +44,6 @@
     },
     {
       "id": "4",
-      "name": "Mahsulot B",
-      "price": 200
-    },
-    {
-      "id": "5",
-      "name": "Mahsulot B",
-      "price": 200
-    },
-    {
-      "id": "6",
-      "name": "Mahsulot B",
-      "price": 200
-    },
-    {
-      "id": "7",
-      "name": "Mahsulot B",
-      "price": 200
-    },
-    {
-      "id": "8",
-      "name": "Mahsulot B",
-      "price": 200
-    },
-    {
-      "id": "9",
-      "name": "Mahsulot B",
-      "price": 200
-    },
-    {
-      "id": "10",
-      "name": "Mahsulot B",
-      "price": 200
-    },
-    {
-      "id": "11",
-      "name": "Mahsulot B",
-      "price": 200
-    },
-    {
-      "id": "12",
-      "name": "Mahsulot B",
-      "price": 200
-    },
-    {
-      "id": "13",
-      "name": "Mahsulot B",
-      "price": 200
-    },
-    {
-      "id": "14",
-      "name": "Mahsulot B",
-      "price": 200
-    },
-    {
-      "id": "15",
-      "name": "Mahsulot B",
-      "price": 200
-    },
-    {
-      "id": "16",
-      "name": "Mahsulot B",
-      "price": 200
-    },
-    {
-      "id": "17",
-      "name": "Mahsulot B",
-      "price": 200
-    },
-    {
-      "id": "18",
-      "name": "Mahsulot B",
-      "price": 200
-    },
-    {
-      "id": "19",
-      "name": "Mahsulot B",
-      "price": 200
-    },
-    {
-      "id": "20",
-      "name": "Mahsulot B",
-      "price": 200
-    },
-    {
-      "id": "21",
       "name": "Mahsulot B",
       "price": 200
     }

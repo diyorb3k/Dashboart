@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchTodos, deleteTodo, updateTodo } from "../app/todo/todoSlice";
-import { Table, Button, Spin, Alert } from 'antd';
+import { Table, Button, Spin, Alert, Input } from 'antd';
 import AddTodo from "./AddTodo";
 import EditTodo from "./EditTodo";
 
@@ -10,6 +10,7 @@ const Teachers = () => {
   const dispatch = useDispatch();
   const [isEditing, setIsEditing] = useState(false);
   const [currentTodo, setCurrentTodo] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     dispatch(fetchTodos());
@@ -30,6 +31,15 @@ const Teachers = () => {
     setIsEditing(false);
     setCurrentTodo(null);
   };
+
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredTodos = todos.filter((todo) => 
+    todo.firstName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    todo.lastName.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   const columns = [
     {
@@ -75,11 +85,17 @@ const Teachers = () => {
 
   return (
     <div>
-      <h1>Techers.page</h1>
-         <AddTodo />
-      {loading && <Spin tip="Loading..."/>}
+      <h1>Teachers</h1>
+      <AddTodo />
+      <Input 
+        placeholder="Search by Title, First Name, or Last Name" 
+        value={searchTerm} 
+        onChange={handleSearch} 
+        style={{ marginBottom: '16px' }}
+      />
+      {loading && <Spin tip="Loading..." />}
       {error && <Alert message="Error" type="error" description={error} showIcon />}
-      <Table dataSource={todos} columns={columns} rowKey="id" />
+      <Table dataSource={filteredTodos} columns={columns} rowKey="id" />
       {isEditing && 
         <EditTodo visible={isEditing} onClose={handleCloseEdit} todo={currentTodo} />
       }
