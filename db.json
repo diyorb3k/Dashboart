@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "9fbd",
-      "title": "sgsgfdsr",
+      "title": "salom",
       "firstName": "sdfsd",
       "lastName": "sdfsgsf",
       "completed": false,
@@ -57,6 +57,13 @@
       "title": "ZSCVXSZDFAS",
       "firstName": "ZXCSDCACSXCS",
       "lastName": "ZCXZCZCZ",
+      "completed": false
+    },
+    {
+      "id": "b676",
+      "title": "СЛИМЫМВИРЫСЧ",
+      "firstName": "ФСЫВСВВ",
+      "lastName": "ЫВЫВМЫВ",
       "completed": false
     }
   ],
@@ -135,15 +142,6 @@
     },
     {
       "id": "11",
-      "name": "Developer B",
-      "price": 70000,
-      "description": "Backend Developer",
-      "category": "IT",
-      "education": "Master",
-      "experience": "5 years"
-    },
-    {
-      "id": "12",
       "name": "Developer B",
       "price": 70000,
       "description": "Backend Developer",

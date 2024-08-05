@@ -5,6 +5,7 @@ import { Table, Button, Spin, Alert, Input } from "antd";
 import AddTodo from "./AddTodo";
 import EditTodo from "./EditTodo";
 import StudentTodo from "./StudentTodo";
+import StudentEdit from "./StudentEdit";
 
 const Student = () => {
   const { loading, products, error } = useSelector((state) => state.products);
@@ -110,7 +111,7 @@ const Student = () => {
       )}
       <Table dataSource={filteredTodos} columns={columns} rowKey="id" />
       {isEditing && (
-        <EditTodo
+        <StudentEdit
           visible={isEditing}
           onClose={handleCloseEdit}
           todo={currentTodo}
