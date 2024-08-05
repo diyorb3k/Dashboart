@@ -1,51 +1,75 @@
 {
   "users": [
     {
-      "id": "4fbb",
-      "title": "sdcs",
-      "firstName": "acsdcc",
-      "lastName": "adcdsc",
-      "completed": false
-    },
-    {
-      "id": "0fbf",
-      "title": "sfdffdsgs",
-      "firstName": "qasddsf",
-      "lastName": "fsdfsd",
-      "completed": false
-    },
-    {
       "id": "9fbd",
       "title": "sgsgfdsr",
       "firstName": "sdfsd",
       "lastName": "sdfsgsf",
-      "completed": false
+      "completed": false,
+      "education": "Magistr"
     },
     {
       "id": "dce5",
       "title": "sggrwew",
       "firstName": "fdsfgsdd",
       "lastName": "sdgdss",
-      "completed": false
+      "completed": false,
+      "education": "Bakalavr"
     },
     {
       "id": "093f",
       "title": "trertedf",
       "firstName": "wewrtrw",
       "lastName": "erertwer43",
-      "completed": false
+      "completed": false,
+      "education": "PhD"
     }
   ],
   "products": [
     {
+      "id": "1",
+      "name": "Developer A",
+      "price": 50000,
+      "description": "Frontend Developer",
+      "category": "IT",
+      "education": "Bachelor",
+      "experience": "3 years"
+    },
+    {
+      "id": "2",
+      "name": "Developer B",
+      "price": 70000,
+      "description": "Backend Developer",
+      "category": "IT",
+      "education": "Master",
+      "experience": "5 years"
+    },
+    {
       "id": "3",
-      "name": "Mahsulot A",
-      "price": 100
+      "name": "Developer C",
+      "price": 60000,
+      "description": "Full Stack Developer",
+      "category": "IT",
+      "education": "PhD",
+      "experience": "4 years"
     },
     {
       "id": "4",
-      "name": "Mahsulot B",
-      "price": 200
+      "name": "Developer D",
+      "price": 55000,
+      "description": "Mobile Developer",
+      "category": "IT",
+      "education": "Bachelor",
+      "experience": "2 years"
+    },
+    {
+      "id": "5",
+      "name": "Developer E",
+      "price": 65000,
+      "description": "Data Scientist",
+      "category": "IT",
+      "education": "Master",
+      "experience": "6 years"
     }
   ]
 }

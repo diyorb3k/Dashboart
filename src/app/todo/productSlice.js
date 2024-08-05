@@ -1,52 +1,116 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
-// Asynchronous thunk to fetch products
-export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
-  const response = await fetch('http://localhost:3000/products');
-  if (!response.ok) {
-    throw new Error('Failed to fetch products');
+export const fetchTodos = createAsyncThunk("todos/fetchTodos", async () => {
+  try {
+    const res = await axios.get("http://localhost:3000/products");
+    return res.data;
+  } catch (err) {
+    return err.message;
   }
-  return response.json();
 });
 
-// Create a slice for products
-export const productSlice = createSlice({
-  name: 'product',
-  initialState: {
-    products: [],
-    loading: false,
-    error: null,
-  },
+export const addTodo = createAsyncThunk("todos/addTodo", async (todo) => {
+  try {
+    const res = await axios.post("http://localhost:3000/products", todo);
+    return res.data;
+  } catch (err) {
+    return err.message;
+  }
+});
+
+export const deleteTodo = createAsyncThunk("todos/deleteTodo", async (id) => {
+  try {
+    const res = await axios.delete(`http://localhost:3000/products/${id}`);
+    return res.data;
+  } catch (err) {
+    return err.message;
+  }
+});
+
+export const updateTodo = createAsyncThunk("todos/updateTodo", async (todo) => {
+  try {
+    const res = await axios.put(
+      `http://localhost:3000/products/${todo.id}`,
+      todo
+    );
+    return res.data;
+  } catch (err) {
+    return err.message;
+  }
+});
+
+const initialState = {
+  loading: false,
+  products: [],
+  error: "",
+};
+
+const productSlice = createSlice({
+  name: "products",
+  initialState,
   reducers: {
-    addProduct: (state, action) => {
-      state.products.push(action.payload);
-    },
-    deleteProduct: (state, action) => {
-      state.products = state.products.filter(product => product.id !== action.payload);
-    },
-    updateProduct: (state, action) => {
-      const index = state.products.findIndex(product => product.id === action.payload.id);
-      if (index !== -1) {
-        state.products[index] = action.payload;
-      }
+    search: (state, action) => {
+      state.searchTerm = action.payload;
     },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchProducts.pending, (state) => {
+      .addCase(fetchTodos.pending, (state) => {
         state.loading = true;
-        state.error = null;
       })
-      .addCase(fetchProducts.fulfilled, (state, action) => {
+      .addCase(fetchTodos.fulfilled, (state, action) => {
         state.loading = false;
         state.products = action.payload;
+        state.error = "";
       })
-      .addCase(fetchProducts.rejected, (state, action) => {
+      .addCase(fetchTodos.rejected, (state, action) => {
+        state.loading = false;
+        state.products = [];
+        state.error = action.error.message;
+      })
+      .addCase(addTodo.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(addTodo.fulfilled, (state, action) => {
+        state.loading = false;
+        state.products.push(action.payload);
+        state.error = "";
+      })
+      .addCase(addTodo.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+      })
+      .addCase(deleteTodo.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(deleteTodo.fulfilled, (state, action) => {
+        state.loading = false;
+        state.products = state.todos.filter(
+          (todo) => products.id !== action.meta.arg
+        );
+        state.error = "";
+      })
+      .addCase(deleteTodo.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+      })
+      .addCase(updateTodo.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(updateTodo.fulfilled, (state, action) => {
+        state.loading = false;
+        state.products = state.todos.map((todo) =>
+          todo.id === action.payload.id ? action.payload : todo
+        );
+        state.error = "";
+      })
+      .addCase(updateTodo.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       });
   },
 });
 
-export const { addProduct, deleteProduct, updateProduct } = productSlice.actions;
-export default productSlice.reducer;
+export const toDoProducts = productSlice.reducer;
+export const todoActions = productSlice.actions;
