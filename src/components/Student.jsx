@@ -50,9 +50,9 @@ const Teachers = () => {
       width: 300,
     },
     {
-      title: "Title",
-      dataIndex: "title",
-      key: "title",
+      title: "Education",
+      dataIndex: "education",
+      key: "education",
       width: 300,
     },
     {
