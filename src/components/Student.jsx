@@ -4,8 +4,9 @@ import { fetchTodos, deleteTodo, updateTodo } from "../app/todo/productSlice";
 import { Table, Button, Spin, Alert, Input } from "antd";
 import AddTodo from "./AddTodo";
 import EditTodo from "./EditTodo";
+import StudentTodo from "./StudentTodo";
 
-const Teachers = () => {
+const Student = () => {
   const { loading, products, error } = useSelector((state) => state.products);
   console.log(products);
   const dispatch = useDispatch();
@@ -96,7 +97,7 @@ const Teachers = () => {
   return (
     <div>
       <h1>Students</h1>
-      <AddTodo />
+      <StudentTodo/>
       <Input
         placeholder="Search by Title, First Name, or Last Name"
         value={searchTerm}
@@ -119,4 +120,4 @@ const Teachers = () => {
   );
 };
 
-export default Teachers;
+export default Student;
