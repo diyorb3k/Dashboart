@@ -10,9 +10,9 @@ export const fetchTodos = createAsyncThunk("products/fetchTodos", async () => {
   }
 });
 
-export const addTodo = createAsyncThunk("products/addTodo", async (products) => {
+export const addTodo = createAsyncThunk("products/addTodo", async (product) => {
   try {
-    const res = await axios.post("http://localhost:3000/products", products);
+    const res = await axios.post("http://localhost:3000/products", product);
     return res.data;
   } catch (err) {
     return err.message;
@@ -21,18 +21,17 @@ export const addTodo = createAsyncThunk("products/addTodo", async (products) => 
 
 export const deleteTodo = createAsyncThunk("products/deleteTodo", async (id) => {
   try {
-    const res = await axios.delete(`http://localhost:3000/products/${id}`);
-    return res.data;
+    await axios.delete(`http://localhost:3000/products/${id}`);
+    return id;
   } catch (err) {
     return err.message;
   }
 });
 
-export const updateTodo = createAsyncThunk("products/updateTodo", async (products) => {
+export const updateTodo = createAsyncThunk("products/updateTodo", async (product) => {
   try {
     const res = await axios.put(
-      `http://localhost:3000/products/${products.id}`,
-      todo
+      `http://localhost:3000/products/${product.id}`, product
     );
     return res.data;
   } catch (err) {
@@ -86,8 +85,8 @@ const productSlice = createSlice({
       })
       .addCase(deleteTodo.fulfilled, (state, action) => {
         state.loading = false;
-        state.products = state.todos.filter(
-          (todo) => products.id !== action.meta.arg
+        state.products = state.products.filter(
+          (product) => product.id !== action.payload
         );
         state.error = "";
       })
@@ -100,8 +99,8 @@ const productSlice = createSlice({
       })
       .addCase(updateTodo.fulfilled, (state, action) => {
         state.loading = false;
-        state.products = state.todos.map((todo) =>
-          todo.id === action.payload.id ? action.payload : todo
+        state.products = state.products.map((product) =>
+          product.id === action.payload.id ? action.payload : product
         );
         state.error = "";
       })

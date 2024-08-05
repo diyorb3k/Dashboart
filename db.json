@@ -70,9 +70,9 @@
   "products": [
     {
       "id": "3",
-      "name": "Developer B",
+      "name": "Developer Bы",
       "price": 70000,
-      "description": "Backend Developer",
+      "description": "Backend Developers",
       "category": "IT",
       "education": "Master",
       "experience": "5 years"
